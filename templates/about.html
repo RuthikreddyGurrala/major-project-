@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>About</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ url_for('index') }}">Vehicle Damage App</a>
+    <div class="navbar-nav">
+        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+        <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+        <a class="nav-link" href="{{ url_for('prediction') }}">Prediction</a>
+    </div>
+</nav>
+<div class="container mt-5">
+    <h1>About Vehicle Damage Detection</h1>
+    <p>This app helps predict vehicle damage levels and estimate repair costs.</p>
+</div>
+</body></html>

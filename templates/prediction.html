@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>Prediction</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ url_for('index') }}">Vehicle Damage App</a>
+    <div class="navbar-nav">
+        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+        <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+        <a class="nav-link" href="{{ url_for('register') }}">Register</a>
+        <a class="nav-link" href="{{ url_for('prediction') }}">Prediction</a>
+    </div>
+</nav>
+<div class="container mt-5">
+    <h2>Upload Vehicle Image</h2>
+    <form action="/result" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <input type="file" name="image" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+    {% if prediction %}
+    <div class="alert alert-info mt-3">Estimated Repair Cost: {{ prediction }}</div>
+    {% endif %}
+</div></body></html>
